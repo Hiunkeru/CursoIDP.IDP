@@ -67,7 +67,8 @@ namespace IdentityServerHost.Quickstart.UI
                         Claims = new List<Claim>
                         {
                             new Claim("given_name", "Alex"),
-                            new Claim("family_name", "Picazo")
+                            new Claim("family_name", "Picazo"),
+                            new Claim("address", "Dirección de Alex")
                         }
                     },
                     new TestUser
@@ -78,7 +79,8 @@ namespace IdentityServerHost.Quickstart.UI
                         Claims = new List<Claim>
                         {
                             new Claim("given_name", "Rodri"),
-                            new Claim("family_name", "Picazo")
+                            new Claim("family_name", "Picazo"),
+                            new Claim(JwtClaimTypes.Address, "Dirección de Rodrigo"),
                         }
                     }
                 };

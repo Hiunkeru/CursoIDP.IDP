@@ -14,7 +14,8 @@ namespace CursoIDP.IDP
             new IdentityResource[]
             { 
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile()
+                new IdentityResources.Profile(),
+                new IdentityResources.Address() 
             };
 
         public static IEnumerable<ApiScope> ApiScopes =>
@@ -36,7 +37,8 @@ namespace CursoIDP.IDP
                     RedirectUris = new List<string>{ "https://localhost:5010/signin-oidc"},
                     AllowedScopes = {
                         IdentityServerConstants.StandardScopes.OpenId, 
-                        IdentityServerConstants.StandardScopes.Profile
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Address
                     },
                     ClientSecrets = { new Secret("UserClientSecret".Sha512())},
                     RequireConsent = true,
